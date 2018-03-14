@@ -1,8 +1,8 @@
 import requests
 
 vin=raw_input('Enter VIN: ')
-client_id='F06D279AF097E71195F69F6685914432'
-secret='AeBD6ZaT9VnPxGEO37Guig'
+client_id=raw_input('Enter Client_ID: ')
+secret=raw_input('Enter Secret: ')
 ##(token generation) print ('\nHere is your 1 hour token:  '+requests.post("https://api.dmotorworks.com/auth2/tokens", data={"grant_type":"client_credentials"}, auth=(client_id, secret)).json()["access_token"])
 token=(requests.post("https://api.dmotorworks.com/auth2/tokens", data={"grant_type":"client_credentials"}, auth=(client_id, secret)).json()["access_token"])
 
